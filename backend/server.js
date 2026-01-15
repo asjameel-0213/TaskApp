@@ -26,6 +26,7 @@ console.log(`Server running on port ${PORT}`);
 app.use(cors());
 // Middleware to parse JSON request bodies
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(logger);
 // Routes
 // Example route
