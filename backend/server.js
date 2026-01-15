@@ -18,6 +18,10 @@ const userRoutes = require("./routes/userRoutes");
 const app = express();
 // Use port from .env or default to 8888
 const PORT = process.env.PORT || 8888;
+// Start server
+app.listen(PORT, () => {
+console.log(`Server running on port ${PORT}`);
+});
 
 app.use(cors());
 // Middleware to parse JSON request bodies
@@ -53,7 +57,3 @@ sequelize
 sequelize.sync({ alter: true })
 .then(() => console.log("✅ Database synced with role field"))
 .catch(err => console.error("❌ Sync failed:", err));
-// Start server
-app.listen(PORT, () => {
-console.log(`Server running on port ${PORT}`);
-});
