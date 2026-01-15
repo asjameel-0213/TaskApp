@@ -9,7 +9,7 @@ const { connectDB, sequelize } = require("./config/db");
 const Product = require("./models/productsModel"); // Ensure model is imported
 const apiRoutes = require("./routes/apiRoutes");
 const logger = require("./middleware/logger");
-const errorHandler = require("./middleware/errorHandler");
+const errorHandler = require("./middleware/errorhandler");
 const productRoutes = require("./routes/productRoutes");
 const userRoutes = require("./routes/userRoutes");
 
